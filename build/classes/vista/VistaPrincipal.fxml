@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.input.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="514.0" prefWidth="687.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ContraladorPrincipal">
+   <children>
+      <Label layoutX="14.0" layoutY="15.0" lineSpacing="2.0" text="Buscar Estudiante">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBuscar" layoutX="141.0" layoutY="13.0" prefHeight="25.0" prefWidth="335.0" promptText="Nombre" style="-fx-border-radius: 10;" />
+      <Pane layoutY="52.0" prefHeight="75.0" prefWidth="687.0">
+         <children>
+            <TextField fx:id="txtNombre" layoutX="14.0" layoutY="38.0" prefHeight="25.0" prefWidth="156.0" promptText="Nombre" style="-fx-border-radius: 10;" />
+            <Separator layoutX="4.0" layoutY="-12.0" prefHeight="14.0" prefWidth="687.0" />
+            <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="134.0" text="Insertar Estudiante">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" layoutX="188.0" layoutY="38.0" prefHeight="25.0" prefWidth="180.0" promptText="Email" style="-fx-border-radius: 10;" />
+            <TextField fx:id="txtTelefono" layoutX="389.0" layoutY="38.0" prefHeight="25.0" prefWidth="108.0" promptText="Telefono" style="-fx-border-radius: 10;" />
+            <Button fx:id="btnInsetar" layoutX="521.0" layoutY="35.0" mnemonicParsing="false" onAction="#click" prefHeight="29.0" prefWidth="156.0" style="-fx-background-color: rgb(11, 94, 215); -fx-background-radius: 10;" text="Insetar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="tableEstu" layoutY="130.0" prefHeight="384.0" prefWidth="572.0">
+        <columns>
+          <TableColumn fx:id="columId" prefWidth="60.0" resizable="false" text="ID" />
+          <TableColumn fx:id="colNombre" onEditCommit="#onEditChange" prefWidth="183.0" resizable="false" text="NOMBRE" />
+            <TableColumn fx:id="colEmail" onEditCommit="#onEditChange" prefWidth="229.0" resizable="false" text="EMAIL" />
+            <TableColumn fx:id="colTelefono" minWidth="0.0" onEditCommit="#onEditChange" prefWidth="98.0" resizable="false" text="TELEFONO" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnEliminar" layoutX="582.0" layoutY="298.0" mnemonicParsing="false" onAction="#clickEliminar" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: rgb(187, 45, 59); -fx-background-radius: 10;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnActualizar" layoutX="582.0" layoutY="343.0" mnemonicParsing="false" onAction="#clickActu" prefHeight="29.0" prefWidth="83.0" style="-fx-background-color: rgb(21, 115, 71); -fx-background-radius: 10;" text="Actualizar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Separator layoutX="573.0" layoutY="277.0" prefHeight="14.0" prefWidth="108.0" />
+      <ChoiceBox fx:id="selector" layoutX="578.0" layoutY="155.0" prefHeight="25.0" prefWidth="98.0" />
+      <Label layoutX="582.0" layoutY="130.0" text="Ordenar por:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
