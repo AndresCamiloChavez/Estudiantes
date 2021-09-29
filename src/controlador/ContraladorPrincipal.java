@@ -165,7 +165,7 @@ public class ContraladorPrincipal implements Initializable {
     private void clickEliminar(ActionEvent event) {
         if (tableEstu.getSelectionModel().getSelectedItem().getId() >= 0) {
             if (estudianteDAO.eliminarEstudiante(tableEstu.getSelectionModel().getSelectedItem())) {
-                mostrarAlertaPersonalizada("EXITO", "Se ha elimina el estudiante: " + tableEstu.getSelectionModel().getSelectedItem().getNombre() + " ", Alert.AlertType.INFORMATION);
+                mostrarAlertaPersonalizada("EXITO", "Se ha eliminado el estudiante: " + tableEstu.getSelectionModel().getSelectedItem().getNombre() + " ", Alert.AlertType.INFORMATION);
             }
             cargarEstudiantes();
         } else {
